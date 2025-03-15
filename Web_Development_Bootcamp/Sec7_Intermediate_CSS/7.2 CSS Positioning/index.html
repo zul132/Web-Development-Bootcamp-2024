@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Positioning Exercise</title>
+  <style>
+    /* Write your code here */
+    .red-circle {
+      background-color: red;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: absolute;
+      top: 150px; /* top: 50% would give the same effect */
+      left: 250px; /* 50% of blue-box's width */
+    }
+
+    .blue-box {
+      background-color: blue;
+      height: 300px;
+      width: 500px;
+      position: relative;
+      top: 200px;
+      left: 200px;
+    }
+  </style>
+</head>
+
+<!--
+  4 Values for the Position Attribute - static, relative, absolute & fixed.
+
+  1. Static Positioning
+     - This is the default HTML position. All elements flow one below the other. 
+     - i.e. When you add a new element, it gets positioned below the previous element by default.
+     - Items are stacked one on top of the other without any spacing unless specified.
+     
+    Note: when you set position as static, the left, top, right, bottom attributes are Not Applied even if you set values for these attributes in CSS.
+    So, a box with CSS:
+    .box {
+      position: static;
+      left: 50px;
+      top: 50px; 
+    }   
+    Here, this box will stay foxed in its dfault HTML position. If you check in Inspect, the left and top values will be disabled.
+
+  2. Relative Positioning
+     - Positions the element relative to its default static position.
+     - So if you have 
+     {
+        position: relative;
+        left: 50px;
+        top: 50px; 
+     }
+     Then this will position your element 50px from the left and 50px below the top of its default position.
+
+     - Relative positioning takes the static position of your element and positions it relative to that (default) position.
+  
+  3. Absolute Positioning
+     - Position relative to the nearest positioned ancestor OR top left corner of the Webpage.
+     - Note: the Ancestor rule will Only be applied if the element has an Ancestor with its position set to relative.
+     - So, if you want to position any of your elements relative to their outer element (Ancestor), then you need to set the position of their nearest Ancestor to relative first in order to apply Absolute positioning.
+
+    Z-index is an imp concept that is related to Absolute positioning. 
+    It determines which elements get to be displayed on top of other elements.
+
+    Higher the Z-index value, more is its importance. By default, all elements have a z-index value of 0. 
+    However, abosolute positioned elements are removed from their original flow, so they get displayed on top of other elements. You can still push an absolute positioned element to the back by setting its z-index to a negative value.
+    
+  4. Fixed Positioning
+     - Position relative to the top left corner of the Browser Window.
+     - So, when you Scroll the webpage, your Fixed positioned element will remain fixed in its position relative to the Web Broswer, while all the other elements will move down along with the webpage.
+  
+  Note: The position attribute is separate from the margin which is separate from the padding attribute.
+-->
+
+<body>
+  <div class="blue-box">
+    <div class="red-circle">
+    </div>
+  </div>
+
+</body>
+
+</html>
