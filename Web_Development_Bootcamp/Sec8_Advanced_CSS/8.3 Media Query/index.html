@@ -1,6 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--
+    MEDIA QUERIES:
+    Used to apply CSS styles based on the device's screen size.
+    With media queries, you can add breakpoints to define responsive layouts.
+
+    A media query consists of a media type and one or more expressions that check for the conditions of particular media features.
+    The media type can be all, print, screen, speech, etc.
+    The media features can be width, height, resolution, orientation, etc.
+
+    The media query can be used to apply styles for different devices, such as mobile phones, tablets, and desktops.
+    The media query can be used to apply styles for different screen sizes, such as small, medium, and large screens.
+    The media query can be used to apply styles for different orientations, such as portrait and landscape.
+    The media query can be used to apply styles for different resolutions, such as low, medium, and high resolutions.
+    The media query can be used to apply styles for different print styles, such as black and white and color.
+
+    We use the print media type to apply styles for when the website is printed.
+-->
+
+<!-- 
+TODO: Change the background color for each device
+[lightsalmon] Mobile Devices: 319px — 480px
+[powderblue] iPads and Tablets: 481px — 1200px
+[limegreen] Laptops: 1201px — 1600px
+[seagreen] Desktops: 1601px and more
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Media Query</title>
+  <style>
+    body {
+      background-color: aquamarine;
+    }
+
+    @media (min-width: 319px) and (max-width: 480px) {
+      body {
+        background-color: lightsalmon; 
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 1200px) {
+      body {
+        background-color: powderblue;
+      }
+    }
+
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      body {
+        background-color: limegreen;
+      }
+    }
+
+    @media (min-width: 1601px) {
+      body {
+        background-color: seagreen;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
 <!-- 
 TODO: Change the background color for each device
 [lightsalmon] Mobile Devices: 319px — 480px
